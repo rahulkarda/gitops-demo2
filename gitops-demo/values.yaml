@@ -1,0 +1,32 @@
+replicaCount: 2
+# Add this to your existing values.yaml
+
+image:
+  repository: rahulkarda2002/gitops-demo
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: LoadBalancer
+  port: 80
+  targetPort: 3000
+
+serviceAccount:
+  # Specifies whether a ServiceAccount should be created
+  create: true
+  # The name of the ServiceAccount to use.
+  # If not set and create is true, a name is generated using the fullname template
+  name: ""
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 80
+
+ingress:
+  enabled: false
+  # Other ingress-related configurations can follow
+  # hosts:
+  #   - host: chart-example.local
+  #     paths: []
