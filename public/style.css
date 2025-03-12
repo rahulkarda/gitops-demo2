@@ -1,0 +1,54 @@
+/* Reset defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply styles to html and body for full height */
+html, body {
+    font-family: 'Arial', sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+/* Set background and center content */
+body {
+    background: url('https://source.unsplash.com/1920x1080/?technology,cloud') no-repeat center center/cover;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center; /* Centers vertically */
+    justify-content: center; /* Centers horizontally */
+}
+
+/* Styling for the container */
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 500px;
+    width: 80%; /* Adjust width dynamically */
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #34495e;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+strong {
+    color: #16a085;
+}
